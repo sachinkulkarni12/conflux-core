@@ -72,6 +72,15 @@ public final class SearchParameters {
         return new SearchParameters(sqlSearch, officeId, externalId, name, hierarchy, null, null, offset, maxLimitAllowed, orderBy,
                 sortOrder, staffId, accountNo, loanId, savingsId, orphansOnly);
     }
+    
+    public static SearchParameters forVillages(final String sqlSearch, final Long officeId, final String externalId, final String name, 
+            final Integer offset, final Integer limit, final String orderBy, final String sortOrder) {
+
+        final Integer maxLimitAllowed = getCheckedLimit(limit);
+        final Boolean orphansOnly = false;
+        return new SearchParameters(sqlSearch, officeId, externalId, name, null, null, null, offset, maxLimitAllowed, orderBy, sortOrder, null,
+                null, null, null,orphansOnly);
+    }
 
     public static SearchParameters forOffices(final String orderBy, final String sortOrder) {
         final Boolean orphansOnly = false;
