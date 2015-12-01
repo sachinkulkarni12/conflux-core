@@ -346,7 +346,8 @@ public class ClientReadPlatformServiceImpl implements ClientReadPlatformService 
             final Long subStatusId = JdbcSupport.getLong(rs, "subStatus");
             final String subStatusValue = rs.getString("subStatusValue");
             final String subStatusDesc = rs.getString("subStatusDesc");
-            final CodeValueData subStatus = CodeValueData.instance(subStatusId, subStatusValue, subStatusDesc);
+            final boolean isActive = false;
+            final CodeValueData subStatus = CodeValueData.instance(subStatusId, subStatusValue, subStatusDesc, isActive);
 
             final Long officeId = JdbcSupport.getLong(rs, "officeId");
             final String officeName = rs.getString("officeName");
@@ -497,7 +498,8 @@ public class ClientReadPlatformServiceImpl implements ClientReadPlatformService 
             final Long subStatusId = JdbcSupport.getLong(rs, "subStatus");
             final String subStatusValue = rs.getString("subStatusValue");
             final String subStatusDesc = rs.getString("subStatusDesc");
-            final CodeValueData subStatus = CodeValueData.instance(subStatusId, subStatusValue, subStatusDesc);
+            final boolean isActive = false;
+            final CodeValueData subStatus = CodeValueData.instance(subStatusId, subStatusValue, subStatusDesc, isActive);
 
             final Long officeId = JdbcSupport.getLong(rs, "officeId");
             final String officeName = rs.getString("officeName");
